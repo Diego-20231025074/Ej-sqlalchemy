@@ -6,6 +6,7 @@ class Programa:
     def init(self):
         
         self .app=Flask(__name__)
+        self.app.config['SQLALCHEMY_DATABSE_URI']="sqlite:///estudiantes.sqlite3"
         
         self.app.add_url_rule('/nuevo', view_func=self.agregar)
         
