@@ -1,4 +1,4 @@
-from flask import Flask 
+from flask import Flask, render_template
 
 
 
@@ -14,7 +14,7 @@ class Programa:
         
         
         def agregar(self):
-            return 
+            return render_template('nuevoEstudiantes.html')
         
         
   
