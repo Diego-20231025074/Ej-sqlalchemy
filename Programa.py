@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 from db import db
 from Estudiante import Estudiante
 
@@ -22,7 +22,7 @@ class Programa:
         
         
         def buscarTodos(self):
-            return "TO DO: "
+            return render_template('mostrarTodos.html', estudiantes=Estudiante.query.all())
         
         
         def agregar(self):
@@ -43,6 +43,7 @@ class Programa:
                 db.session.add(miEstudiante)
                 db.session.commit()
             
+            return redirect(url_for("buscarTodos"))
             
             
             
