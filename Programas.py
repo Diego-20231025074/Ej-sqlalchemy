@@ -9,4 +9,4 @@ class Programa:
         
         self.app.add_url_rule('/nuevo', view_func=self.agregar)
         
-        #inicializar el ser
+        #inicializar el servidor 
